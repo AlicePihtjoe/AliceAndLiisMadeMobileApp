@@ -13,12 +13,12 @@ import { styles } from "./styles";
 import Separator from "../../../components/Separator";
 import GoogleLogin from "../../../components/GoogleLogin";
 
-const Signup = () => {
+const Signin = () => {
     const [checked, setChecked] = useState(false)
 
     return (
         <View style={styles.container}>
-           <AuthHeader title="Sign Up"/>
+           <AuthHeader title="Sign In"/>
            <Input label="Name" placeholder="Cool Name"/>
            <Input label="Email" placeholder="example@gmail.com"/>
            <Input isPassword label="Password" placeholder="*****"/>
@@ -31,9 +31,9 @@ const Signup = () => {
            <Separator text="Or sign up with" />
            <GoogleLogin />
            <Text style={styles.footerText}>Already have an account?
-                <Text style={styles.footerLink}>Sign In</Text>
+                <Text style={styles.footerLink}>Sign Up</Text>
            </Text>
         </View>
     )
 }
-export default React.memo(Signup)
+export default React.memo(Signin)
