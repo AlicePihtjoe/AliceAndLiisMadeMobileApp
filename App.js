@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import {SafeAreaView} from 'react-native'
 import Signup from './src/screens/auth/Signup';
 import Config from 'react-native-config';
+import Signin from './src/screens/auth/Signin';
 
 // const WEB_CLIENT_ID = 
 
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <SafeAreaView>
       <Signup />
+      <Signin />
     </SafeAreaView>
   );
 };

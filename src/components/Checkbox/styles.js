@@ -19,6 +19,5 @@ export const styles = StyleSheet.create({
     checkIcon: {
         width: 12,
         height: 9,
-        justifyItems: 'center'
     }
 })
