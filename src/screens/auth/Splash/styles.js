@@ -22,12 +22,12 @@ export const styles = StyleSheet.create({
         textAlign: "center"
     },
     innerTitle: {
-        color: colors.pink,
+        color: colors.blue,
         textDecorationLine: 'underline',
         textAlign: "center"
     },
     footerText: {
-        color: colors.pink,
+        color: colors.blue,
         padding: 8,
         marginLeft: 6,
         marginRight: 6,

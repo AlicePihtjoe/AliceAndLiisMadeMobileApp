@@ -27,10 +27,10 @@ export const styles = StyleSheet.create({
     footerText: {
         color: colors.blue,
         marginBottom: 56,
-        textAlign: 'center'
+        textAlign: 'center',
     },
     footerLink: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
     agreeRow: {
         flexDirection: 'row',

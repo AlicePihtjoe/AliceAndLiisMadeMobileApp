@@ -3,12 +3,22 @@ import {
     Text,
     View,
     Image,
-    TouchableOpacity
+    Pressable
 } from "react-native"
 import Button from "../../../components/Button";
 import { styles } from "./styles";
 
-const Splash = () => {
+const Splash = ({navigation}) => {
+    
+
+    const onSignup = () => {
+        navigation.navigate('Signup')
+    }
+
+    const onSignin = () => {
+        navigation.navigate('Signin')
+    }
+
     return (
         <View style={styles.container}>
             <Image resizeMode="contain" style={styles.image} source={require('../../../assets/splash-image.png')}/>
@@ -19,10 +29,10 @@ const Splash = () => {
                 <Text style={styles.title}>screen</Text>
             </View>
 
-            <Button title="Sign Up"/>
-            <TouchableOpacity hitSlop={20}>
-                <Text style={styles.footerText}>Sign In</Text>
-            </TouchableOpacity>
+            <Button onPress={onSignup} title="Sign Up"/>
+            <Pressable hitSlop={20}>
+                <Text onPress={onSignin} style={styles.footerText}>Sign In</Text>
+            </Pressable>
         </View>
     )
 }

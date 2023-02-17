@@ -3,7 +3,8 @@ import {
     Text,
     View,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    SafeAreaView
 } from "react-native"
 import AuthHeader from "../../../components/AuthHeader";
 import Input from "../../../components/Input";
@@ -12,13 +13,19 @@ import Button from "../../../components/Button"
 import { styles } from "./styles";
 import Separator from "../../../components/Separator";
 import GoogleLogin from "../../../components/GoogleLogin";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-const Signup = () => {
+const Signup = ({navigation}) => {
     const [checked, setChecked] = useState(false)
 
+    const onBack = () => {
+        navigation.goBack()
+    }
+
     return (
+        <SafeAreaView>
         <View style={styles.container}>
-           <AuthHeader title="Sign Up"/>
+           <AuthHeader onBackPress={onBack} title="Sign Up"/>
            <Input label="Name" placeholder="Cool Name"/>
            <Input label="Email" placeholder="example@gmail.com"/>
            <Input isPassword label="Password" placeholder="*****"/>
@@ -31,9 +38,10 @@ const Signup = () => {
            <Separator text="Or sign up with" />
            <GoogleLogin />
            <Text style={styles.footerText}>Already have an account?
-                <Text style={styles.footerLink}>Sign In</Text>
+                <Text style={styles.footerLink}> Sign In</Text>
            </Text>
         </View>
+        </SafeAreaView>
     )
 }
 export default React.memo(Signup)
