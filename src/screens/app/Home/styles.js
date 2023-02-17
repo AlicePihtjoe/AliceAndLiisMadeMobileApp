@@ -4,6 +4,9 @@ import { colors } from "../../../utils/colors";
 export const styles = StyleSheet.create({
 
     container: {
-        backgroundColor: colors.white
+        padding: 24
+    },
+    list: {
+        paddingVertical: 24
     }
 })

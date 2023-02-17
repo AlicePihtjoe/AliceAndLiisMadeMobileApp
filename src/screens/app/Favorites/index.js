@@ -7,7 +7,7 @@ const Favorites = () => {
     return (
         <SafeAreaView>
             <View style={styles.container}>
-                <Text>Profile</Text>
+                <Text>Favorites</Text>
             </View>
         </SafeAreaView>
     )
