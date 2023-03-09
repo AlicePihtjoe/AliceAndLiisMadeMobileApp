@@ -1,6 +1,7 @@
 import React from "react";
 import { Pressable, Image, Text } from "react-native"
 import { styles } from './styles';
+import { ProductDetails } from "../../screens/ProductDetails";
 
 const ProductHomeItem = ({title, image, price, onPress}) => {
     return(
